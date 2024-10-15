@@ -1,0 +1,130 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 80vw;
+  margin: 5vh auto;
+  padding: 3vh 5vw;
+  background: white;
+  border-radius: 2vw;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Header */
+.profile-header {
+  text-align: center;
+  padding-bottom: 3vh;
+  border-bottom: 0.3vh solid #e0e0e0;
+}
+
+.profile-picture {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 2vh;
+}
+
+.username {
+  font-size: 4vw;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.job-title {
+  font-size: 2.5vw;
+  color: #00796b;
+}
+
+.location {
+  font-size: 1.5vw;
+  color: #555;
+}
+
+.location a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+/* Profile Summary */
+.profile-summary {
+  margin-top: 4vh;
+}
+
+.profile-summary h2,
+.key-skills h2,
+.experience h2,
+.education h2,
+.projects h2,
+.certifications h2 {
+  font-size: 2.5vw;
+  color: #2c3e50;
+}
+
+.profile-summary p,
+.key-skills li,
+.experience p,
+.education p,
+.projects p,
+.certifications p {
+  font-size: 1.8vw;
+  color: #555;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.skills li {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 1vh 2vw;
+  border-radius: 2vh;
+  font-size: 1.5vw;
+}
+
+/* Experience, Education, Projects, Certifications Section */
+.experience, .education, .projects, .certifications {
+  margin-top: 4vh;
+}
+
+.experience li, .education li, .projects li, .certifications li {
+  margin-bottom: 2vh;
+}
+
+.experience h3, .education h3, .projects h3, .certifications h3 {
+  font-size: 2vw;
+  color: #00796b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .username {
+    font-size: 5vw;
+  }
+
+  .job-title, .profile-summary p, .experience p, .education p, .projects p, .certifications p {
+    font-size: 2vw;
+  }
+
+  .skills li {
+    font-size: 1.8vw;
+  }
+}

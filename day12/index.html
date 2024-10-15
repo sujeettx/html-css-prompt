@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilo Social - Let's scale your brand, together</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Lilo social</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-button">Get in touch</a>
+        </header>
+        
+        <main>
+            <div class="content">
+                <h1>Let's scale your brand, together</h1>
+                <p>Get a start@lilosocial.com</p>
+                <div class="illustration">
+                    <img src="undraw_programming_re_kg9v.svg" alt="Illustration of person working">
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Type name">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company *</label>
+                        <input type="text" id="company" name="company" required placeholder="Type company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" placeholder="Type phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Type email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="help">How can we help? *</label>
+                        <textarea id="help" name="help" required placeholder="A brief description here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Services *</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="services" value="Paid Media"> Paid Media</label>
+                            <label><input type="checkbox" name="services" value="Content Creation"> Content Creation</label>
+                            <label><input type="checkbox" name="services" value="Digital Experience"> Digital Experience</label>
+                            <label><input type="checkbox" name="services" value="Strategy & Consulting"> Strategy & Consulting</label>
+                            <label><input type="checkbox" name="services" value="Email"> Email</label>
+                            <label><input type="checkbox" name="services" value="Other"> Other</label>
+                        </div>
+                    </div>
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // GSAP animations
+        gsap.from("header", {opacity: 0, y: -50, duration: 1, ease: "power3.out"});
+        gsap.from(".content", {opacity: 0, x: -50, duration: 1, delay: 0.5, ease: "power3.out"});
+        gsap.from(".form-container", {opacity: 0, x: 50, duration: 1, delay: 0.5, ease: "power3.out"});
+        gsap.from(".illustration", {opacity: 0, scale: 0.8, duration: 1, delay: 1, ease: "elastic.out(1, 0.5)"});
+    </script>
+</body>
+</html>

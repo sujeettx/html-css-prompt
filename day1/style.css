@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #fbcece;
+}
+aside{
+    background-color: #50146C;
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2vh 3vh;
+}
+aside header h1{
+    color: #F79500;
+    font-size: 3vw;
+    font-weight:900;
+}
+aside nav h3{
+    font-size: 2vw;
+    font-weight: 100;
+    padding-bottom: 1vw;
+    color: white;
+}
+aside footer{
+    color: white;
+    font-size: 2vw;
+}
+section{
+    background-color: #fbcece;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.section-content{
+    flex: 0.55;
+    display: flex;
+    align-items:start;
+    padding: 0vh 4vh;
+    flex-direction: column;
+    gap: 1.5vw;
+    text-align: left;
+    margin-left: 3vw;
+}
+.section-image{
+    background-image: url(image3-Photoroom.png);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.45;
+}
+.section-content h1{
+    color: #F9514E;
+    font-weight: 900;
+    font-size: 4vw;
+}
+.section-content h2{
+    font-size: 2vw;
+    font-weight: 900;
+    color: rgb(0, 158, 155);
+}
+.section-content p{
+    font-size: 1.7vw;
+    color: #F9514E;
+}
+.section-content h3{
+    font-size: 2vw;
+    color: rgb(171, 93, 4);
+}
+button{
+    padding: 2vh 3vh;
+    background-color:orange;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 4vw;
+}
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    backdrop-filter: blur(1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.overlay h1 {
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    color:#45a049;
+    font-weight: 900;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 0.8vw;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1vw;
+    width: 36vw;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 0.5vw;
+}
+
+.gender {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+label {
+    margin-right: 1vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+select {
+    padding: 0.8vw;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 1vw;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1vw;
+    border-radius: 4px;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.ri-menu-line{
+    display: none;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+}

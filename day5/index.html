@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Electro</h1>
+        </div>
+        <div class="tab-container">
+            <div class="tab active" onclick="showTab('popular')">Popular Calculator</div>
+            <div class="tab" onclick="showTab('loan')">Loan Calculator</div>
+        </div>
+        <div class="content">
+            <div id="popular-calculator" class="calculator-grid">
+                <div class="calculator-item">
+                    <div class="icon">📊</div>
+                    <p>SIP Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">💰</div>
+                    <p>Loan Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">📈</div>
+                    <p>SWP Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">🏦</div>
+                    <p>FD Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">💲</div>
+                    <p>RD Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">💳</div>
+                    <p>EMI Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">👨‍💼</div>
+                    <p>EPF Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">📝</div>
+                    <p>Income Tax Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">🏦</div>
+                    <p>PPF Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">🧾</div>
+                    <p>GST Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">📊</div>
+                    <p>Mutual Fund Returns Calculator</p>
+                </div>
+                <div class="calculator-item">
+                    <div class="icon">👧</div>
+                    <p>Sukanya Samriddhi Yojana Calculator</p>
+                </div>
+            </div>
+            <div id="loan-calculator" class="loan-calculator">
+                <h2>Loan Calculator</h2>
+                <input type="number" placeholder="Loan amount" id="loan-amount">
+                <input type="number" placeholder="Rate of interest (p.a)" id="interest-rate">
+                <input type="number" placeholder="Loan tenure (years)" id="loan-tenure">
+                <div class="result">
+                    <p>Monthly EMI: ₹<span id="monthly-emi">0</span></p>
+                    <p>Principal amount: ₹<span id="principal-amount">0</span></p>
+                    <p>Total interest: ₹<span id="total-interest">0</span></p>
+                    <p>Total amount: ₹<span id="total-amount">0</span></p>
+                </div>
+                <div class="buttons">
+                    <button>SHARE</button>
+                    <button>Save as PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`.tab:nth-child(${tabName === 'popular' ? '1' : '2'})`).classList.add('active');
+            document.getElementById('popular-calculator').style.display = tabName === 'popular' ? 'grid' : 'none';
+            document.getElementById('loan-calculator').style.display = tabName === 'loan' ? 'block' : 'none';
+        }
+
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loan-amount').value);
+            const rate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12;
+            const tenure = parseFloat(document.getElementById('loan-tenure').value) * 12;
+
+            if (amount && rate && tenure) {
+                const emi = (amount * rate * Math.pow(1 + rate, tenure)) / (Math.pow(1 + rate, tenure) - 1);
+                const totalAmount = emi * tenure;
+                const totalInterest = totalAmount - amount;
+
+                document.getElementById('monthly-emi').textContent = emi.toFixed(2);
+                document.getElementById('principal-amount').textContent = amount.toFixed(2);
+                document.getElementById('total-interest').textContent = totalInterest.toFixed(2);
+                document.getElementById('total-amount').textContent = totalAmount.toFixed(2);
+            }
+        }
+
+        ['loan-amount', 'interest-rate', 'loan-tenure'].forEach(id => {
+            document.getElementById(id).addEventListener('input', calculateLoan);
+        });
+    </script> -->
+</body>
+</html>
